@@ -94,7 +94,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: docker run ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+        run: docker run ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main | grep container && echo "TEST PASSED"
       
       
       
